@@ -1,0 +1,5 @@
+language: objective-c
+before_install:
+    - cd ios
+    - gem install cocoapods
+script: xctool -workspace Push4Parse.xcworkspace -scheme Push4Parse -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO clean build

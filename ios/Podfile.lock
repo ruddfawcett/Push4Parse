@@ -1,0 +1,17 @@
+PODS:
+  - AFNetworking (1.3.3)
+  - SVProgressHUD (0.9)
+
+DEPENDENCIES:
+  - AFNetworking (~> 1.3.1)
+  - SVProgressHUD (from `https://github.com/samvermette/SVProgressHUD.git`)
+
+EXTERNAL SOURCES:
+  SVProgressHUD:
+    :git: https://github.com/samvermette/SVProgressHUD.git
+
+SPEC CHECKSUMS:
+  AFNetworking: 0700ec7a58c36ad217173e167f6e4df7270df66b
+  SVProgressHUD: 03d4845ec8e64591726428a08236c6a5489d45f8
+
+COCOAPODS: 0.26.2
