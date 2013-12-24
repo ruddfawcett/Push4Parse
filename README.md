@@ -1,8 +1,9 @@
 Push4Parse
 ==========
+> Push4Parse is an elegant notification composer for http://parse.com, a service that allows you to send push notifications to your iOS apps easily.  Push4Parse makes it easy to send notifications to your app on the go with a fun, easy to use UI and simple application adding process.  The app is available on the [App Store](https://appsto.re/i6FG3gt).  
 
-The iPhone application "Push4Parse", available on the [App Store](https://appsto.re/i6FG3gt
-).
+##Screenshots
+<img src='http://i.imgur.com/OlbIqM5.png' />
 
 ##Building & Configuration
 
