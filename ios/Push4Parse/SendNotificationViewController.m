@@ -91,6 +91,7 @@
 
 - (void)actualSend:(NSString*)message withBadge:(NSString*)badge andChannels:(NSString*)channels {
     #warning Make sure to change this - otherwise the app will not work.  See "Building" in README.
+    
     NSLog(@"Make sure to change this - otherwise the app will not work.  See \"Building\" in README.");
     
     AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@"http://yourdomain.com/"]];
