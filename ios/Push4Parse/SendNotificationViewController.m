@@ -2,7 +2,7 @@
 //  SendNotificationViewController.m
 //  Push4Parse
 //
-//  Created by Rex Finn on 6/7/13.
+//  Created by Rudd Fawcett on 6/7/13.
 //  Copyright (c) 2013 Trigon, LLC. All rights reserved.
 //
 
