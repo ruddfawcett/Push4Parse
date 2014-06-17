@@ -27,9 +27,20 @@
     
     self.title = @"My Apps";
     
-    self.navigationController.toolbarHidden = YES;
+    
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:0.0 green:0.478 blue:1.00 alpha:1.0];
     self.navigationController.navigationBar.translucent = NO;
+    
+    self.navigationController.toolbarHidden = NO;
+    self.navigationController.toolbar.barTintColor = self.navigationController.navigationBar.barTintColor;
+    
+    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [infoButton addTarget:self action:@selector(licenseInfo) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *infoBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
+    UIBarButtonItem *flexibleItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    
+    self.toolbarItems = @[flexibleItem, infoBarButtonItem];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -45,6 +56,12 @@
     
     self.navigationItem.leftBarButtonItem.style = UIBarButtonItemStylePlain;
     self.navigationItem.leftBarButtonItem.title = @"Edit";
+}
+
+- (void)licenseInfo {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Attributions" message:@"Push4Parse uses AFNetworking (git.io/SpD20w) & SVProgressHUD (git.io/gAnFoA) which are both under the MIT license, by Mattt Thompson and Sam Vermette respectively." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    
+    [alert show];
 }
 
 - (IBAction)addApplication:(id)sender {
@@ -73,10 +90,10 @@
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
-    if (self.userApplications.count != 0) {
-        return @"Push4Parse, Version 1.1";
-    }
-    else return nil;
+    // if (self.userApplications.count != 0) {
+        return @"Push4Parse Version 1.1, \u00A9 Rudd Fawcett 2014.";
+    // }
+    // else return nil;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
